@@ -1,0 +1,115 @@
+.about{
+    background-image: url(file:///home/user/Desktop/OCA-projects/project1-My%20portfolio/Code/img/back.jpg) ;
+    padding: 10% 15% ;
+    position: relative;
+    background-size: cover;
+    z-index: 1;
+
+}
+
+.omar-profile{
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.key{
+background-color: rgba(17, 212, 226, 0.904);
+text-align: center;
+border-radius: 16px;
+font-family: 'Chilanka', cursive;
+font-size: 20px;
+}
+
+.key h2{
+    font-size: 30px;
+}
+
+.navbar-nav{
+    margin-left : auto;
+    font-size: 20px;
+}
+
+.text{
+
+    background-color: rgba(21, 190, 202, 0.932);
+}
+.mb-4 {
+text-align: center;
+border-radius: 16px;
+font-family: 'Chilanka', cursive;
+font-size: 20px;
+background-color:rgb(17, 212, 226);
+
+}
+.footer-copyright{
+    background-color:rgba(58, 103, 107, 0.877);
+}
+
+@media (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+@media (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+
+.card-deck{
+      margin: 9px 7.5px 9px 7.5px;
+  }
+
+.card-2{
+align-items: center;
+text-align: center;
+margin: 0 15% 0 15%;
+    
+}
+
+  .Post{
+    border: 1px solid gray;
+    padding: 10px 10px;
+    margin: 10px 10px;
+  }
+/**/
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(17, 212, 226, 0.904);
+    flex-wrap: wrap;
+  }
+  
+  .flex-container > div {
+    background-color: #f1f1f1;
+    width: 150px;
+    margin: 10px;
+    text-align: center;
+    line-height: 150px;
+    font-size: 30px;
+    
+  }
+  #worked{
+    background-color: rgba(17, 212, 226, 0.904);
+    text-align: center;
+    font-family: 'Chilanka', cursive;
+    font-size: 40px;
+    margin-bottom: 0%;
+  }
+  /* */
