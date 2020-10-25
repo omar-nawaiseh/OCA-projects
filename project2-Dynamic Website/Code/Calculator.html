@@ -1,0 +1,168 @@
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="description" content="Free Web tutorials for HTML and CSS" />
+    <meta name="author" content="Omar , Ayah , Osama" />
+    <meta http-equiv="refresh" content="300" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css" />
+    
+
+    <title>Calculator</title>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ustify-content-center">
+      <a class="navbar-brand" href="#"><span class="navspan">O2A</span>WEBDEV</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto ustify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ToDo.html">ToDo List</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Cal <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <select onchange="changeFontFamily()" name="font_family" id="font_family" id="inputState" class="form-control">
+            <option selected>Font...</option>
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <select onchange="changeFontSize()" name="font_size" id="font_size" id="inputState" class="form-control">
+            
+            <option selected>Size...</option>
+            <option value="8pt">8pt</option>
+            <option value="10pt">10pt</option>
+            <option value="12pt" >12pt</option>
+            <option value="14pt">14pt</option>
+
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <input  onchange="changeColor()" id="pickcolor"  type="color" class="form-control" id="inputZip">
+        </div>
+      </div>
+    </form>
+    <!--calculator-->
+    <h3 class="text-center">Calculator</h3>
+    
+    <div id="calculator">
+      <div id="output-container">
+        <input readonly>
+        <button class="rest1" id="reset">AC</button>
+      </div>
+      <div id="numbers">
+        <button id="zero">0</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button id="dot">.</button>
+        <button type="button" value="" id="factorialID" onclick="factorial()">n!</button>
+        <button type="button" value="" class="operator" onclick="absolute()">abs(</button>
+        <button class="equal1" id="calculate">=</button>
+      </div>
+      <div id="operators">
+        <button>+</button>
+        <button>-</button>
+        <button>×</button>
+        <button>÷</button>
+      </div>
+    </div>
+    <!--calculator end-->
+
+    <!--footar-->
+    <footer class="footer-distributed">
+ 
+      <div class="footer-left">
+   
+      <h3>O2A<span>WEBDEV</span></h3>
+   
+      <p class="footer-links">
+
+      </p>
+   
+      <p class="footer-company-name">full stack developer &copy; 2020</p>
+      </div>
+   
+      <div class="footer-center">
+   
+      <div>
+      <i class="fa fa-map-marker"></i>
+      <p><span>Rights reserved to students of the Academy</span> O2A</p>
+      </div>
+   
+      <div>
+      <i class="fa fa-phone"></i>
+      <p>+0 000 00000</p>
+      </div>
+   
+      <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="#">o2a@coding-academy.com</a></p>
+      </div>
+   
+      </div>
+   
+      <div class="footer-right">
+   
+        <p class="footer-company-about">
+        <span>About </span>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quisquam tempora explicabo, commodi est dolor similique nulla tempore molestiae,.
+      </p>
+   
+      </div>
+   
+      </footer>
+      <script>
+        function changeFontSize() {
+          var z = document.getElementById("font_size").value;
+          document.body.style.fontSize=z;
+          };
+
+
+          function changeColor (){
+            var x =document.getElementById("pickcolor").value;
+            document.body.style.backgroundColor= x;
+          }
+
+          function changeFontFamily(){
+            var y = document.getElementById("font_family").value;
+            document.body.style.fontFamily=y;
+          }
+
+      </script>
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/cal.js"></script>
+  </body>
+</html>

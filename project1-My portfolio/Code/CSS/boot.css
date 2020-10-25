@@ -93,7 +93,7 @@ margin: 0 15% 0 15%;
     display: flex;
     justify-content: center;
     background-color: rgba(17, 212, 226, 0.904);
-    flex-wrap: wrap;
+    flex-direction: row-reverse;
   }
   
   .flex-container > div {
