@@ -98,6 +98,13 @@ route::get('/dashboard/index',function (){
 
 
 
+
+/// hana edit and delete for dynamic_accepted_applicant page
+//Route::get('accepted_applicants/{id}/edit','ApplicantController@edit');
+//Route::get('/','ApplicantController@update');
+//Route::get('/','ApplicantController@delete');
+
+
 //testing from adam to understand concepts
 //Route::get('test','CategoryController@test');
 //Route::get('test2','ApplicantController@test');

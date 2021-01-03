@@ -9,11 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="services ">
     <meta property="og:locale" content="en_US">
-    <meta name="description" content="services ">
-    <meta property="og:description" content="At  TOYZEE  it is our belief that children are the future. In order to create the best possible future for them, we must give them the best possible start. TOYZEE  products not only encourage and stimulate young minds, we also protect their growing bodies with ergonomically sound designs.
-">
-    <meta name="keywords" content="e-commerce, toys, interactive games,autism, Kids ,  Php, CSS , JavaScript, Bootstrap, Web Developer,">
-    <meta name="author" content="Mohammad Yacoub & Marya Alzoubi & Roaa AbuShaqra & Firas Diab & Lana Mustafa ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <meta property="og:title" content="Blog ">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="Services">
+    <meta property="og:description" content=" Focus on reaching global needs and easily adapt our technology in new markets to help more families and save lives">
+    <meta name="keywords" content="Blog,Services, Cleaning ,Elderly people care ,Women empowerment,Servecya ,Service provider, employment ,Laravel, Php, CSS , JavaScript, Bootstrap, Web Developer,">
+    <meta name="author" content="Hana Shaq & Osama Aldamat & marya Alzu'bi & Omar  Alnawaiseh & marina alsahawneh ">
+
 
     <!--====== Title ======-->
     <title>@yield('title')</title>

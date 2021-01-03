@@ -79,7 +79,7 @@
 {{--                                <td>{{$category->id}}</td>--}}
                                 <td>{{$category->cat_name}}</td>
                                 <td>{{$category->cat_desc}}</td>
-                                <td><img width="100" height="100" src="{{asset("category_images/$category->cat_image")}}"></td>
+                                <td><img width="100" height="100" alt="'category image" src="{{asset("category_images/$category->cat_image")}}"></td>
                                 <td >
                                     <a href="categories/{{$category->id}}/edit">
                                         <button class="btn btn-primary" value="EDIT" > Edit </button>

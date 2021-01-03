@@ -19,7 +19,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <img width="200" height="200" src="{{asset("category_images/$category->cat_image")}}">
+                                <img width="200" height="200" alt="category image" src="{{asset("category_images/$category->cat_image")}}">
                             </div>
                         </div>
                     </div>

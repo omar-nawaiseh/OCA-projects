@@ -36,13 +36,6 @@ class ApplicantController extends Controller
      */
 
 
-//    //Go to the applicant form page in the public website to register
-//     public function create()
-//     {
-//         $categories =Category::all();
-//         return view("web/create_applicant",compact('categories'));
-//     }
-
 
 
     /**
@@ -51,41 +44,7 @@ class ApplicantController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-//    public function store(createApplicantRequest $request)
-//    {
-//        if ($request->hasFile('applicant_education_img')) {
-//            $file = $request->file('applicant_education_img') ;
-//            $ext = $file->getClientOriginalExtension() ;
-//            $filename = time() . '.' . $ext ;
-//            $file->move('applicant_images', $filename);
-//        }
-//
-//        if ($request->hasFile('applicant_image')) {
-//            $file = $request->file('applicant_image') ;
-//            $ext = $file->getClientOriginalExtension() ;
-//            $applicant_image = time() . '.' . $ext ;
-//            $file->move('applicant_images', $applicant_image);
-//        } else {
-//            $applicant_image = "defaultImage.png";
-//        }
-//
-//        Applicant::create( [
-//            "applicant_name"                    =>$request->applicant_name,
-//            "applicant_email"                   =>$request->applicant_email,
-//            "applicant_mobile"                  =>$request->applicant_mobile,
-//            "applicant_city"                    =>$request->applicant_city,
-//            "category_id"                       =>$request->x,
-//            "applicant_desc"                    =>$request->applicant_desc,
-//            "applicant_subscription_type"       =>$request->applicant_subscription_type,
-//            "applicant_image"                   =>$applicant_image,
-//            "applicant_education_img"           => $filename ,
-//        ]);
-//          //return redirect("/applicants");
-//          //return redirect("/applicants/create");
-//          //return "Welcome, You are in ";
-//          //return back();
-//        return back()->with('status_store', 'your request has been created successfully');
-//    }
+
 
     /**
      * Display the specified resource.
@@ -100,8 +59,9 @@ class ApplicantController extends Controller
     {
         //return "GOT YAA";
         $single_applicant = Applicant::find($id);
+        $category =     Category::find($id);
         //dd($single_applicant);
-        return view('web.single_applicant',compact('single_applicant'));
+        return view('web.single_applicant_page',compact('single_applicant', 'category'));
     }
 
       //////Applicant Related to the admin dashboard
@@ -118,12 +78,7 @@ class ApplicantController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     //edit and update applicants in admin dashboard by the admin only
-    // public function edit(Applicant $applicant,$id)
-    // {
-    //     $applicants = Applicant::findOrFail($id);
-    //     return view('dashboard/categories/edit_category' , compact('category'));
-    // }
+
 
     /**
      * Update the specified resource in storage.
@@ -133,26 +88,7 @@ class ApplicantController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     //update single applicant by admin in admin dashboard
-    // public function update($request, Applicant $applicant)
-    // {
-        // if ($request->hasFile('cat_image')) {
-        //     $file = $request->file('cat_image') ;
-        //     $ext = $file->getClientOriginalExtension() ;
-        //     $filename = time() . '.' . $ext ;
-        //     $file->move('category_images', $filename);
-        // }
-        // else {
-        //     $filename = Category::find($id)->cat_image;
-        // }
-        // Category::findOrFail($id)->update( [
-        //     "cat_name"        =>$request->cat_name,
-        //     "cat_desc"        =>$request->cat_desc,
-        //     "cat_image"       =>$filename,
-        // ]);
-        // return redirect("/categories");
 
-    // }
 
     /**
      * Remove the specified resource from storage.
@@ -161,12 +97,6 @@ class ApplicantController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    //update and editing
-    // public function destroy(Applicant $applicant,$id)
-    // {
-    //     Applicant::findOrFail($id)->delete();
-    //     return redirect("/categories");
-    // }
 
     public function Add_to_applicant($id)
     {
@@ -213,6 +143,50 @@ class ApplicantController extends Controller
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    /// hana edit and delete for dynamic_accepted_applicant page
+//    public function edit(Applicant $applicant,$id)
+//    {
+//        $applicants = Applicant::findOrFail($id);
+//        return view('dashboard.filtration_applicants.accepted.edit_dynamic_accepted_applicant' , compact('applicants'));
+//    }
+//    public function update($request, Applicant $applicant,$id)
+//    {
+//        if ($request->hasFile('applicant_image')) {
+//            $file = $request->file('applicant_image') ;
+//            $ext = $file->getClientOriginalExtension() ;
+//            $filename = time() . '.' . $ext ;
+//            $file->move('applicant_images', $filename);
+//        }
+//        else {
+//            $filename = Applicant::find($id)->applicant_image;
+//        }
+//        Applicant::findOrFail($id)->update( [
+//            "applicant_name"        =>$request->applicant_name,
+//            "applicant_desc"        =>$request->applicant_desc,
+//            "applicant_image"       =>$filename,
+//        ]);
+//        return redirect("/pending");
+//    }
+//    public function destroy(Applicant $applicant,$id)
+//    {
+//        Applicant::findOrFail($id)->delete();
+//        return redirect("/pending");
+//    }
 
 }
 

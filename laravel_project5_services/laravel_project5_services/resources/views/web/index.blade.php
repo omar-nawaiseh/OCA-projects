@@ -55,7 +55,7 @@
                     <div class="col-lg-4 col-md-7 col-sm-9">
                         <div class="single-pricing mt-40">
                             <div class="text-center">
-                                <img src='{{asset("category_images/$categories->cat_image")}}' class="rounded" alt="...">
+                                <img src='{{asset("category_images/$categories->cat_image")}}' class="rounded" alt="category">
                             </div>
                             <div class="pricing-header text-center">
                                 <h4> {{ $categories->cat_name}}</h4>

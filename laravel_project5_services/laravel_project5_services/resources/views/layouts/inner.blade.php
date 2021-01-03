@@ -8,6 +8,17 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Blog ">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="Services">
+    <meta property="og:description" content=" Focus on reaching global needs and easily adapt our technology in new markets to help more families and save lives">
+    <meta name="keywords" content="Blog,Services, Cleaning ,Elderly people care ,Women empowerment,Servecya ,Service provider, employment ,Laravel, Php, CSS , JavaScript, Bootstrap, Web Developer,">
+    <meta name="author" content="Hana Shaq & Osama Aldamat & marya Alzu'bi & Omar  Alnawaiseh & marina alsahawneh ">
 
     <!--====== Title ======-->
     <title>@yield('title')</title>
