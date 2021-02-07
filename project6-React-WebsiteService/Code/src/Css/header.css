@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  width: 100%;
+  background-color: #b08968;
+  padding-left: 30px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Sriracha";
+}
+
+.logo {
+  display: inline-block;
+  font-family: "Sriracha";
+}
+
+/* Link {
+  text-decoration: none;
+  color: #7f5539;
+} */
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-item a {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  font-family: "Sriracha";
+}
+a {
+  color: #fff !important;
+}
+/* .nav-item:hover {
+  background-color: white;
+} */
+
+.nav-item:hover a {
+  color: #7f5539 !important;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 320px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+  background-color: #b08968;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.margin0 {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+li {
+  font-family: "Sriracha";
+  float: left; 
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #7f5539;
+}
+
+.logo {
+  margin-right: 75%; 
+  color: white;
+  flex-grow: 8;
+}
+
+.logo:hover {
+  color: #7f5539;
+} */

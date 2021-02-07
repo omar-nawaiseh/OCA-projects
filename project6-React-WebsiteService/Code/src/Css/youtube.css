@@ -1,0 +1,18 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  
+  } */
+.player {
+  margin: auto;
+  text-align: center;
+}
+
+.youtuob {
+  color: #000;
+  margin: 25px 0;
+  font-family: "Sriracha";
+}

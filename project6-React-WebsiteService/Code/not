@@ -1,0 +1,4 @@
+npm i react-router-dom
+npm install react-bootstrap bootstrap
+npm install react-youtube 
+npm install sweetalert --save
