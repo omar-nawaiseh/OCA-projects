@@ -1,0 +1,39 @@
+/* main{
+    padding:32px;
+    display:flex;
+    flex-direction: column;
+    align-content:center;
+    min-height:100vh;
+} */
+
+.popup{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100vh;
+    background-color:#DDDDDa ;
+    display:flex;
+    justify-content:center ;
+    align-items: center;
+}
+.popup-inner{
+    position:relative;
+    padding: 32px;
+    width:100%;
+    max-width:640px;
+    background-color: white;
+}
+.close-btn {    /* position: absolute; */
+    padding: 10px 17px;
+    width: 100px;
+    background:  #4A707A ;
+    color: #f4f4f4;
+    border: 1px solid #171717;
+    cursor: pointer;
+    border-radius:3px ;
+}
+a:hover{
+    text-decoration: none;
+    color:white;
+}

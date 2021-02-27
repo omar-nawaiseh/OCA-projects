@@ -1,0 +1,28 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  
+  } */
+  .player {
+  
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width:120%;
+    margin:0 100px;
+
+   
+
+  }
+  
+  .youtuob {
+    color: #000;
+    margin: 25px 0;
+    font-family: 'Parisienne', cursive;
+    /* font-weight: 800; */
+    color:#7697A0;
+  }
+  

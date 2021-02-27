@@ -1,29 +1,57 @@
 {
-    "name": "ecommerce",
-    "version": "1.0.0",
-    "description": "way from the usual.The reason behind this project is that most of the people are now sitting at home in the presence of the Coronavirus, and our absolute secretary is that art changes the family's psyche and supports artists and painters in Jordan. We have launched a MaHlee project,",
-    "main": "server.js",
-    "scripts": {
-        "start": "node backend/server.js",
-        "server": "nodemon backend/server.js",
-        "client": "npm start --prefix frontend",
-        "newdata": "node backend/seederScript",
-        "dev": "concurrently \"npm run newdata\" \"npm run server\" \"npm run client\"",
-        "data:import": "node backend/seederScript"
-    },
-    "keywords": ["Leonardo Da Vinci, Mona Lisa, Johannes Vermeer, Sandro Botticelli ,Vincent van Gogh ,Andy Warhol,Pablo Picasso,Vincent van Gogh , Qaulity, Price, locally, pretty,faster delivery, avaliable24/7,Art , Paint,Canvas ,colors"],
-    "author": " Roaa, Omer,  Laith ,Lara , Mohammed",
-    "license": "ISC",
+    "name": "frontend",
+    "version": "0.1.0",
+    "proxy": "http://127.0.0.1:5000",
+    "private": true,
     "dependencies": {
-        "bcryptjs": "^2.4.3",
-        "dotenv": "^8.2.0",
-        "express": "^4.17.1",
-        "jsonwebtoken": "^8.5.1",
-        "mongoose": "^5.11.17",
-        "nodemailer": "^6.4.18"
+        "@material-ui/core": "^4.11.3",
+        "@testing-library/jest-dom": "^5.11.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^12.1.10",
+        "axios": "^0.21.1",
+        "bootstrap": "^4.6.0",
+        "google-auth-library": "^7.0.2",
+        "mdb-react-ui-kit": "^1.0.0-alpha3",
+        "react": "^17.0.1",
+        "react-bootstrap": "^1.5.0",
+        "react-collapse": "^5.1.0",
+        "react-dom": "^17.0.1",
+        "react-google-login": "^5.2.2",
+        "react-redux": "^7.2.2",
+        "react-responsive-carousel": "^3.2.12",
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "4.0.2",
+        "react-testimonial": "^1.0.0",
+        "react-youtube": "^7.13.1",
+        "reactstrap": "^8.9.0",
+        "redux": "^4.0.5",
+        "redux-devtools-extension": "^2.13.8",
+        "redux-thunk": "^2.3.0",
+        "sweetalert": "^2.1.2",
+        "web-vitals": "^1.0.1"
     },
-    "devDependencies": {
-        "concurrently": "^6.0.0",
-        "nodemon": "^2.0.7"
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
     }
 }

@@ -1,0 +1,58 @@
+/* body{
+    margin: 0px;
+    padding: 0px;
+    
+} */
+div.jumbotron{
+    margin:0px;
+    padding: 50px;
+}
+@media (max-width: 640px){
+
+   div.jumbotron{
+       margin:0px;
+       
+   }
+    div.col{
+        display: block; 
+    }
+    #footer-h5{
+        font-size:1rem;
+        font-family: 'Parisienne'; 
+    }
+    #footer-p{
+            font-size:0.8rem;
+    }
+ 
+}
+@media (max-width: 410px){
+    /* div.col{
+         font-size: 0.5rem;
+    } */
+    #footer-h5{
+        font-size:0.7rem;
+    }
+    #footer-p{
+            font-size:0.5rem;
+    }
+
+    
+}
+@media (max-width: 320px){
+    div.col{
+        font-size: 0.3rem;
+    }
+    #footer-h5{
+        font-size:0.6rem;
+    }
+    #footer-p{
+            font-size:0.4rem;
+    } 
+    #sign{
+        margin: 1rem;
+        margin-top: -2px;
+       }
+       #footer-img{
+        width:30%;
+    }
+}
