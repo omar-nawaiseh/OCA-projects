@@ -1,7 +1,12 @@
 import React from 'react'
-import { Text, StyleSheet, View, SafeAreaView, TouchableOpacity, FlatList, KeyboardAvoidingView, TextInput, Keyboard } from 'react-native'
+import { Text, StyleSheet, View, SafeAreaView, TouchableOpacity, FlatList, KeyboardAvoidingView, TextInput, Keyboard, Animated } from 'react-native'
 import {AntDesign, Ionicons} from '@expo/vector-icons';
 import colors from '../Colors';
+import { Swipeable } from 'react-native-gesture-handler';
+
+
+
+
 
 export default class TodoModal extends React.Component {
 
@@ -28,6 +33,7 @@ export default class TodoModal extends React.Component {
 
     renderTodo = (todo , index) => {
         return (
+          <Swipeable renderRightActions={() => this.rightActions()}>
             <View style={styles.todocontainer} >
                 <TouchableOpacity onPress={() => this.toggleTodoCompleted(index)}>
                     <Ionicons 
@@ -45,8 +51,22 @@ export default class TodoModal extends React.Component {
                     {todo.title}
                 </Text>
             </View>
+            </Swipeable>
         )
     };
+
+
+    rightActions = () =>{
+      return (
+        <TouchableOpacity>
+          <Animated.View style={styles.deleteButton}>
+            <Animated.Text style={{color:colors.white, fontWeight: "800"}}>
+              Delete
+            </Animated.Text>
+          </Animated.View>
+        </TouchableOpacity>
+      )
+    }
    
     render() {
         const list = this.props.list
@@ -72,12 +92,11 @@ export default class TodoModal extends React.Component {
                     </View>
                 </View>
 
-                <View style={[styles.section,{ flex: 3 }]}>
+                <View style={[styles.section,{ flex: 3 , marginVertical: 16}]}>
                     <FlatList
                         data={list.todos}
                         renderItem={({ item, index }) => this.renderTodo(item, index)}
                         keyExtractor={item => item.title} 
-                        contentContainerStyle={{paddingHorizontal:32, paddingVertical:64}}
                         showsVerticalScrollIndicator={false}
                     />
                 </View>
@@ -108,13 +127,13 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
       },
       section: {
-        flex: 1,
         alignSelf:"stretch"
       },
       header: {
         justifyContent:"flex-end",
         marginLeft:64,
-        borderBottomWidth:3
+        borderBottomWidth:3,
+        paddingTop:16
       },
       title: {
         fontSize:30,
@@ -130,7 +149,8 @@ const styles = StyleSheet.create({
       footer:{
         paddingHorizontal:32,
         flexDirection:"row",
-        alignItems:"center"
+        alignItems:"center",
+        paddingVertical:16
       },
       input:{
         flex: 1,
@@ -149,12 +169,20 @@ const styles = StyleSheet.create({
       todocontainer:{
         paddingVertical:16,
         flexDirection:"row",
-        alignItems:"center"
+        alignItems:"center",
+        paddingLeft:32
       },
       todo:{
         color:colors.black,
         fontWeight:"700",
         fontSize:16
+      },
+      deleteButton:{
+        flex:1,
+        backgroundColor:colors.red,
+        alignItems: 'center',
+        justifyContent: 'center',
+        width:80
       }
 
 })
