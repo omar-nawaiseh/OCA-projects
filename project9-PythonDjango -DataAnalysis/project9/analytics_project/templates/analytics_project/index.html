@@ -9,7 +9,7 @@
 		<meta charset="utf-8">
 		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
 
-		<title> SmartAdmin </title>
+		<title> Dashboard </title>
 		<meta name="description" content="">
 		<meta name="author" content="">
 			
@@ -200,14 +200,18 @@
 					</div>
 					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-8">
 						<ul id="sparks" class="">
-							
 							<li class="sparks-info">
 								<h5> Total Cases <span class="txt-color-purple"><i style="color: blue;" class="fas fa-procedures"></i>&nbsp; {{ totalCasesSum.Total_Cases__sum }}</span></h5>
 								
 
 							</li>
 							<li class="sparks-info">
-								<h5> Total Deaths <span class="txt-color-purple"><i style="color: red;" class="fas fa-skull-crossbones"></i>									&nbsp; {{ totalDeathsSum.Total_Deaths__sum }}</span></h5>
+
+								<h5> Total Deaths <span class="txt-color-purple"><i style="color: red;" class="fas fa-skull-crossbones"></i>&nbsp; {{ totalDeathsSum.Total_Deaths__sum }}</span></h5>
+								
+							</li>
+							<li class="sparks-info">
+								<h5> Number of Records <span class="txt-color-purple"><i style="color: black;" class="fas fa-arrow-alt-circle-up"></i>									&nbsp; {{ totalCasesCount.Total_Deaths__count }}</span></h5>
 								
 							</li>
 						

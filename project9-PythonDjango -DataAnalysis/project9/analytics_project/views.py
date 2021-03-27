@@ -1,30 +1,34 @@
 from django.shortcuts import render, redirect
 from .models import Country
 from .resources import CountryResource
-from django.db.models import Sum
+from django.db.models import Sum, Avg, Max
 from django.http import JsonResponse
-from django.db.models import Sum
+from django.db.models import Sum , Count, Avg
 from tablib import Dataset
 from django.contrib import messages
 import sweetify
 from django.contrib.auth import authenticate, login, logout
+import time
+import math
 
 
 
 
 
-												
+
 
 
 # Create your views here.
 
 def index(request):
+
     if request.user.is_authenticated:
         context = {
         "countries" : Country.objects.all(),
         "topten" : Country.objects.order_by('-Total_Cases')[:10],
         "totalCasesSum" : Country.objects.aggregate(Sum('Total_Cases')),
         "totalDeathsSum" : Country.objects.aggregate(Sum('Total_Deaths')),
+        "totalCasesCount" : Country.objects.aggregate(Count('Total_Deaths')),
         }
         return render(request, 'analytics_project/partials/base.html' , context)
     else:
@@ -43,8 +47,12 @@ def simple_upload(request):
         "countries" : Country.objects.all(),
         "topten" : Country.objects.order_by('-Total_Cases')[:10],
         "totalCasesSum" : Country.objects.aggregate(Sum('Total_Cases')),
+        "totalCasesCount" : Country.objects.aggregate(Count('Total_Cases')),
         "totalDeathsSum" : Country.objects.aggregate(Sum('Total_Deaths')),
     }
+
+    start_time = time.time()
+
     
     if request.method == 'POST':
         country_resource = CountryResource()
@@ -54,7 +62,7 @@ def simple_upload(request):
 
         if not new_countries.name.endswith("xlsx"):
 
-            messages.error(request, "Wrong Format")
+            messages.error(request, "Wrong Format for " +  new_countries.name)
             return redirect ('/dashboard')
             # sweetify.info(self.request, 'Message sent', button='Ok', timer=3000)
 
@@ -65,7 +73,7 @@ def simple_upload(request):
         imported_data = dataset.load(new_countries.read(),format='xlsx')
         #print(imported_data)
         for data in imported_data:
-        	print(data[1])
+        	# print(data[1])
         	value = Country(
         		data[0],
         		data[1],
@@ -74,9 +82,13 @@ def simple_upload(request):
         		 data[4],
         		 data[5],
         		)
-        	value.save()       
+        	value.save()  
+
+    duration = ((time.time() - start_time))
+    string_duration = str(duration)
+
     
-    messages.success(request, "Successfully Added")
+    messages.success(request,   new_countries.name +" Successfully Added, it was executed in " +  string_duration + " seconds")
     return redirect ('/dashboard')
 
 
@@ -135,17 +147,17 @@ def logout_view(request):
 
 
 
-def covid_chart(request):
-    labels = []
-    data = []
+# def covid_chart(request):
+#     labels = []
+#     data = []
 
-    queryset = Country.objects.values('Total_Cases').annotate(Total_Cases=Sum('Total_Cases')).order_by('-Total_Cases')
-    for entry in queryset:
-        labels.append(entry['Country'])
-        data.append(entry['Total_Cases'])
+#     queryset = Country.objects.values('Total_Cases').annotate(Total_Cases=Sum('Total_Cases')).order_by('-Total_Cases')
+#     for entry in queryset:
+#         labels.append(entry['Country'])
+#         data.append(entry['Total_Cases'])
     
-    return JsonResponse(data={
-        'labels': labels,
-        'data': data,
-    })
+#     return JsonResponse(data={
+#         'labels': labels,
+#         'data': data,
+#     })
 
